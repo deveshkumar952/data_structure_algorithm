@@ -32,14 +32,14 @@ int lengthOfLinkedList(struct Node *head) {
 struct Node *swapKthNodes(struct Node *head, int k) {
     int length = lengthOfLinkedList(head);
 
-    // If k is out of range, return the original linked list
-   if (k <= 0 || k > length)
+//     // If k is out of range, return the original linked list
+//    if (k <= 0 || k > length)
 
-        return head;
+//         return head;
 
-    // If k is the same from both ends, no need to swap
-    if (2 * k - 1 == length)
-        return head;
+//     // If k is the same from both ends, no need to swap
+//     if (2 * k - 1 == length)
+//         return head;
 
     struct Node *prevBegin = NULL, *curBegin = head;
     for (int i = 1; i < k; i++) {
@@ -59,7 +59,7 @@ struct Node *swapKthNodes(struct Node *head, int k) {
     if (prevEnd != NULL)
         prevEnd->next = curBegin;
 
-    // Swap next pointers of kth nodes
+    // Swap next pointers of kth nodes f
     struct Node *temp = curBegin->next;
     curBegin->next = curEnd->next;
     curEnd->next = temp;

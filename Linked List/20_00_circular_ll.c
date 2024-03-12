@@ -54,6 +54,7 @@ int main(){
      linkedlisttraversal(head);
      printf("\n");
      head = insertAtFirst(head,80);
+     head = insertAtFirst(head,8);
      linkedlisttraversal(head);
     return 0;
 }
