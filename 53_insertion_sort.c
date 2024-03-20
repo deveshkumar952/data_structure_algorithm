@@ -12,7 +12,6 @@ void insertionSort(int *A,int n){
     for(int i = 1;i<n-1;i++){
         key = A[i];
         j = i -1;
-        j=i-1;
         //Loop for each pass
         while(j>=0 && A[j]>key) {
             A[j+1]=A[j];
@@ -24,7 +23,7 @@ void insertionSort(int *A,int n){
 int main(){
     int A[] = {12,54,65,7,23,9};
     int n = sizeof(A)/sizeof(A[0]);
-    printf("original Array");
+    printf("original Array\n ");
     print(A,n);
     printf("After Sorting\n");
     insertionSort(A,n);
