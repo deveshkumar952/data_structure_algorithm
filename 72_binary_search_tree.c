@@ -22,14 +22,14 @@ void inorder(struct node* root){
         inorder(root->right);
     }
 }
-void isBST(struct node* root){
+int isBST(struct node* root){
    static struct node *prev = NULL;
     if(root!=NULL){
         if(!isBST(root->left)){
             return 0;
         }
         prev = root;
-        return isBst(root->right);
+        return isBST(root->right);
     }
     else{
         return 1;
@@ -49,6 +49,11 @@ int main(){
     p1 ->left = p3;
     p1->right = p4;
     inorder(p);
-    isBST(p);
+    if (isBST(p)) {
+        printf("\nIt is a Binary Search Tree (BST).\n");
+    } else {
+        printf("\nIt is not a Binary Search Tree (BST).\n");
+    }
     return 0;
 }
+
