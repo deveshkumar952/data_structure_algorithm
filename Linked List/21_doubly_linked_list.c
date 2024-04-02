@@ -12,6 +12,7 @@ void doubly_Traverse(struct Node*ptr)
             printf("Element:%d\n",ptr->data);
         ptr=ptr->next;
     }
+    printf("\n");
 }
 struct Node* insert_At_Begain(struct Node*head,int data)
 {
@@ -95,12 +96,12 @@ struct Node*delete_At_End(struct Node *head)
 };
 int main()
 {
-    int d1,d2,n,d3;
+    // int d1,d2,n,d3;
     struct Node*head=(struct Node*)malloc(sizeof(struct Node));
     struct Node*n2=(struct Node*)malloc(sizeof(struct Node));
     struct Node*n3=(struct Node*)malloc(sizeof(struct Node));
     struct Node*n4=(struct Node*)malloc(sizeof(struct Node));
-    struct Node*n5=(struct Node*)malloc(sizeof(struct Node));
+    // struct Node*n5=(struct Node*)malloc(sizeof(struct Node));
 
     head->pre=NULL;
     head->data=10;
@@ -116,43 +117,49 @@ int main()
 
     n4->pre=n3;
     n4->data=40;
-    n4->next=n5;
+    n4->next=NULL;
 
-    n5->pre=n4;
-    n5->data=50;
-    n5->next=NULL;
+    // n5->pre=n4;
+    // n5->data=50;
+    // n5->next=NULL;
 
     doubly_Traverse(head);
-
-    printf("\n\nEnter The data for the first Node:");
-    scanf("%d",&d1);
-    head=insert_At_Begain(head,d1);
+    printf("\n");
+    printf("The doubly linked list after insertion at first place\n");
+    // printf("\n\nEnter The data for the first Node:");
+    // scanf("%d",&d1);
+    head=insert_At_Begain(head,0);
     doubly_Traverse(head);
 
     // printf("\n\nEnter the index :");
     // scanf("%d",&n);
     // printf("Enter the data for new Node:");
     // scanf("%d",&d2);
-    // head=insert_At_Index(head,d2,n);
-    // doubly_Traverse(head);
+    printf("The doubly linked llist after insertion at index\n");
+    head=insert_At_Index(head,90,2);
+    doubly_Traverse(head);
 
     // printf("\n\nEnter The data for the first Node:");
     // scanf("%d",&d3);
-    // head=insert_At_End(head,d3);
-    // doubly_Traverse(head);
-
+    printf("The doubly linked list after insertion at end\n");
+    head=insert_At_End(head,110);
+    doubly_Traverse(head);
+    
+        printf("The doubly linkded list after deletion at begaining\n");
     // printf("\n\nAfter Deleting First Node\n");
-    // head=delete_At_Begain(head);
-    // doubly_Traverse(head);
+    head=delete_At_Begain(head);
+    doubly_Traverse(head);
 
     // int i;
     // printf("\n\nEnter the Index:");
     // scanf("%d",&i);
     // printf("After Deleting Index Node:\n");
-    // head=delete_At_Index(head,i);
-    // doubly_Traverse(head);
+    printf("The doubly linked list after deletion at index\n");
+    head=delete_At_Index(head,2);
+    doubly_Traverse(head);
 
     // printf("\n\nAfter Deleting Last Node\n");
-    // head=delete_At_End(head);
-    // doubly_Traverse(head);
+    printf("after deletion at end\n");
+    head=delete_At_End(head);
+    doubly_Traverse(head);
 }
