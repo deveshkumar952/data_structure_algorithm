@@ -50,12 +50,12 @@ int dequeue(){
     }
 int main(){
 
-    linkedlisttraversal(f);
-    printf("Dequeuing elemnet %d\n" , dequeue());
+    // linkedlisttraversal(f);
+    // printf("Dequeuing elemnet %d\n" , dequeue());
     enqueue(56);
     enqueue(5);
     enqueue(6);
-    enqueue(4);
+    // enqueue(4);
     linkedlisttraversal(f);
     printf("Dequeuing elemnet %d\n" , dequeue());
     linkedlisttraversal(f);

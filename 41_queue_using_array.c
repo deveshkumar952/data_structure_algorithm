@@ -45,34 +45,36 @@ int dequeue(struct queue *q){
     }
     return a;
 }
-int main(){
-    struct queue *q;
+
+void displayQueue(struct queue *q) {
+    if (isEmpty(q)) {
+        printf("Queue is empty\n");
+        return;
+    }
+    printf("Queue elements are: ");
+    for (int i = q->f + 1; i <= q->r; i++) {
+        printf("%d ", q->arr[i]);
+    }
+    printf("\n");
+}
+int main() {
+    struct queue *q = (struct queue *)malloc(sizeof(struct queue)); // Allocate memory for q
     q->size = 3;
     q->f = q->r = -1;
-    q->arr = (int*)malloc(q->size*sizeof(int));
-    if(isEmpty(q)){
-        printf("Queue is empty\n");
-    }
-
-    //Enqueue few elements
-    enqueue(q,12);
-    enqueue(q,2);
-    enqueue(q,1);
-    // enqueue(q,6);
-
-    //Dequeue few elemenets
-    // printf("Dequeuing element %d\n",dequeue(q));
-    printf("Dequeuing element %d\n",dequeue(q));
-    printf("Dequeuing element %d\n",dequeue(q));
-    printf("Dequeuing element %d\n",dequeue(q));
-    enqueue(q,6);
-
-    if(isEmpty(q)){
-        printf("Queue is empty\n");
-    }
-    if(isFull(q)){
-        printf("Queue us full");
-    }
+    q->arr = (int *)malloc(q->size * sizeof(int));
     
+    //Enqueue few elements
+    enqueue(q, 12);
+    enqueue(q, 2);
+    enqueue(q, 1);
+    displayQueue(q);
+    
+    // Dequeue few elements
+    printf("Dequeuing element %d\n", dequeue(q));
+    displayQueue(q);
+
+    free(q->arr); // Free the memory allocated for q->arr
+    free(q); // Free the memory allocated for q
+
     return 0;
 }

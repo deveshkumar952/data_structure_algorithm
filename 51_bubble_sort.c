@@ -28,8 +28,8 @@ void bubblesort(int *A,int n){
 }
 
 int main(){
-    // int A[] = {54,9,1,7,3,416,653};
-    int A[]={1,2,3,4,5,6,};
+    int A[] = {54,9,1,7,3,416,653};
+    // int A[]={1,2,3,4,5,6,};
     int n =  sizeof(A)/sizeof(A[0]);
     printf("original Array");
     print(A,n);

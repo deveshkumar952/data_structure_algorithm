@@ -16,5 +16,5 @@ def delete_exe_file(folder_path):
                 print(f"Error: {file} - {e.strerror}")
 
 # Example usage:
-folder_path = r"C:\Users\Deves\OneDrive\Desktop\DSA\data_structure_algorithm"  # Specify the folder path
+folder_path = r"C:\Users\Deves\OneDrive\Desktop\all\DSA\data_structure_algorithm"  # Specify the folder path
 delete_exe_file(folder_path)

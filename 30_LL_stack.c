@@ -78,11 +78,12 @@ int main(){
     top = push(top,79);
     top = push(top,18);
     top = push(top,8);
-    // int element = pop(&top);
-    // printf("popped element is %d\n",element);
+     linkedlisttraversal(top);
+    int element = pop(&top);
+    printf("popped element is %d\n",element);
     linkedlisttraversal(top);
-    for(int i = 0;i<3;i++){
-    printf("Value at position %d is : %d\n",i,peek(top,i+1));
-    }
+    // for(int i = 0;i<3;i++){
+    // printf("Value at position %d is : %d\n",i,peek(top,i+1));
+    // }
     return 0;
 }

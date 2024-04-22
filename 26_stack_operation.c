@@ -71,10 +71,10 @@ int main(){
      sp->size = 4;
      sp->top = -1;
      sp->arr = (int *)malloc(sp->size * sizeof(int));
-     printf("stack has been created succesfully\n");
+    //  printf("stack has been created succesfully\n");
 
-    printf("before pushing full:%d\n",isFull(sp));
-    printf("before pushing empty:%d\n",isEmpty(sp));
+    // printf("before pushing full:%d\n",isFull(sp));
+    // printf("before pushing empty:%d\n",isEmpty(sp));
 
     push(sp,56);
     push(sp,516);
@@ -94,7 +94,7 @@ int main(){
     }
         printf("Popped %d from the stack\n",pop(sp));
 
-    printf("bottom element of the stack : %d\n",stackbottom(sp));
-    printf("top of the stack elements is:%d",stackTop(sp));
+    // printf("bottom element of the stack : %d\n",stackbottom(sp));
+    // printf("top of the stack elements is:%d",stackTop(sp));
     return 0;
 }
