@@ -64,7 +64,7 @@ int precedence(char ch){
 }
 
 int isOperator(char ch){
-    if(ch=='+' ||ch =='-' || ch == '/'){
+    if(ch=='+' ||ch =='-' || ch == '/' || ch == '*'){
     return 1;
 }
 else{
@@ -106,7 +106,7 @@ char *infixTopPostfix(char* infix){
 
 int main(){
 
-char * infix = "a*(b+c+d)";
+char * infix = "a-b+t/6";
     printf("postfix is %s",infixTopPostfix(infix));
     return 0;
 }
