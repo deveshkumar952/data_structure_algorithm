@@ -113,7 +113,7 @@ int main()
 
     n3->pre=n2;
     n3->data=30;
-    n3->next=n4;
+    n3->next=n4; 
 
     n4->pre=n3;
     n4->data=40;
